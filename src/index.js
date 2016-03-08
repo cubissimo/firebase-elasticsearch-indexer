@@ -27,12 +27,12 @@ class Indexer {
       type: this.type,
       id: snap.key()
     })
-    .then((exists) => exists ? this.createOrUpdateIndex(snap) : null)
+    .then((exists) => !exists ? this.createOrUpdateIndex(snap) : debug('index already exist %s/%s/%s', this.index, this.type, snap.key()))
     .catch((err) => debug(err.message, err))
   }
 
   createOrUpdateIndex (snap) {
-    debug('index %s/%s/%s', this.index, this.type, snap.key())
+    debug('create or update index %s/%s/%s', this.index, this.type, snap.key())
 
     return this.client.index({
       index: this.index,
