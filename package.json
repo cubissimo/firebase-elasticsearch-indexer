@@ -1,6 +1,6 @@
 {
   "name": "firebase-elasticsearch-indexer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for indexing firebase data with elasticsearch client.",
   "main": "src/index.js",
   "scripts": {

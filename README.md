@@ -15,7 +15,7 @@ var ref = new Firebase('https://<YOUR_APP_ID>.firebaseio.com')
 
 var indexer = new Indexer({
   ref: ref.child('articles'),
-  index: 'myindex',
+  index: 'search',
   type: 'articles',
   client
 })
